@@ -79,14 +79,14 @@ layers:
   - HOME
   - PG UP
   - {t: '$$mdi:transfer$$', type: trans}
-  - RGB OFF
-  - RGB ON
+  - RGB TOG
   - RGB HUI
   - RGB HUD
-  - RGB EFF
+  - RGB SAI
+  - RGB SAD
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - RGB EFR
+  - RGB EFF
   - RGB SPI
   - RGB BRI
   - RGB BRD
