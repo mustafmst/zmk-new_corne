@@ -6,6 +6,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -75,7 +76,7 @@
             display-name = "NUMBER";
             bindings = <
 &trans  &kp N1           &kp N2           &kp N3           &kp N4           &kp N5                                         &mmv MOVE_UP                     &kp N6           &kp N7           &kp N8           &kp N9           &kp N0    &kp BSPC
-&trans  &bt BT_CLR_ALL   &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &bt BT_SEL 3                   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
+&trans  &none            &none            &none            &none            &none                          &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp LEFT         &kp DOWN         &kp UP           &kp RIGHT        &kp HOME  &kp PG_UP
 &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_HUI  &rgb_ug RGB_HUD  &rgb_ug RGB_SAI  &rgb_ug RGB_SAD  &kp C_MUTE                    &mmv MOVE_DOWN                   &rgb_ug RGB_EFF  &rgb_ug RGB_SPI  &rgb_ug RGB_BRI  &rgb_ug RGB_BRD  &kp END   &kp PG_DN
                                           &trans           &trans           &trans                                                                          &kp INS          &kp DEL          &trans
             >;
@@ -98,10 +99,10 @@
         layer_3 {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                                 &mmv MOVE_UP                     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10          &trans
-&trans  &trans  &trans  &trans  &trans  &kp F11                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F12  &trans  &trans  &trans  &kp PRINTSCREEN  &trans
-&trans  &trans  &trans  &trans  &trans  &trans   &kp C_MUTE                    &mmv MOVE_DOWN                   &trans   &trans  &trans  &trans  &trans           &trans
-                        &trans  &trans  &trans                                                                  &trans   &trans  &trans
+&trans  &kp F1          &kp F2        &kp F3        &kp F4        &kp F5                                 &mmv MOVE_UP                     &kp F6   &kp F7  &kp F8  &kp F9  &kp F10          &trans
+&trans  &bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &kp F11                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F12  &trans  &trans  &trans  &kp PRINTSCREEN  &trans
+&trans  &out OUT_TOG    &trans        &trans        &trans        &trans   &kp C_MUTE                    &mmv MOVE_DOWN                   &trans   &trans  &trans  &trans  &trans           &trans
+                                      &trans        &trans        &trans                                                                  &trans   &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
